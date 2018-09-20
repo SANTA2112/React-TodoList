@@ -1,8 +1,13 @@
-/*@font-face {
+@font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-      url('../fonts/OpenSans-Regular.woff') format('woff');
+  src: url('../fonts/OpenSans-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
-*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+

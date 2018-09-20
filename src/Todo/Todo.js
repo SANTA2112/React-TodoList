@@ -1,8 +1,9 @@
 import React from 'react';
 import { createPortal } from 'react-dom'
 import styled from 'styled-components';
+import { Button, ButtonWrap, Text, Wrapper } from "./styled";
 
-const Wrapper = styled.div`
+const WrapperC = styled.div`
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -17,24 +18,26 @@ const Wrapper = styled.div`
 const Confirm = ({ onCancel, onConfirm }) => {
   return createPortal(
     (
-      <Wrapper>
+      <WrapperC>
         <div>
           Удалить?
           <button onClick={onConfirm}>Yes</button>
           <button onClick={onCancel}>No</button>
         </div>
-      </Wrapper>),
+      </WrapperC>),
       document.body
   );
 }
 
 export default ({ todo, confirmIsOpen, removeTodo, handleConfirm, remove }) => (
-  <div>
-    <div>{todo.text}</div>
-    <button onClick={() => removeTodo(todo.id)}>Del</button>
-    <button onClick={() => modifyTodo({ id: todo.id, text: prompt(todo.text) })}>Modify</button>
+  <Wrapper>
+    <Text>{todo.text}</Text>
+    <ButtonWrap>
+      <Button onClick={() => removeTodo(todo.id)}>Del</Button>
+      <Button onClick={() => modifyTodo({ id: todo.id, text: prompt(todo.text) })}>Modify</Button>
+    </ButtonWrap>
     {
       confirmIsOpen && <Confirm onCancel={() => handleConfirm(false) } onConfirm={() => remove(todo.id)} />
     }
-  </div>
+  </Wrapper>
 );
