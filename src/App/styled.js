@@ -112,4 +112,25 @@ export const Form = styled.form`
 
 export const Todos = styled.ul`
   list-style: none;
+  height: 250px;
+  overflow-y: auto;
+  /* width */
+  ::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #25a59a;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #25a59a96;
+  }
 `;

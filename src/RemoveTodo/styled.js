@@ -21,7 +21,6 @@ export const Wrap = styled.div`
   background-color: #fff;
   border-radius: 10px;
   border: 3px solid black;
-  width: 200px;
   padding: 12px;
   display: flex;
   justify-content: center;
@@ -30,7 +29,7 @@ export const Wrap = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 50px;
+  width: 55px;
   padding: 10px 0;
   text-align: center;
   border: none;

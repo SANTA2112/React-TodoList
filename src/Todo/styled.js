@@ -5,17 +5,19 @@ export const Wrapper = styled.li`
   justify-content: space-between;
   padding: 0 5px;
   margin: 20px 0;
-  align-items: center;
 `;
 
 export const Text = styled.p`
   font-size: 16px;
+  padding-right: 10px;
 `;
 
 export const ButtonWrap = styled.div`
   width: 80px;
   display: flex;
   justify-content: space-between;
+  flex: 0 0 auto;
+  padding-right: 4px;
 `;
 
 export const Button = styled.button`

@@ -11,7 +11,7 @@ const redux = connect(
 );
 
 const handlers = withHandlers({
-  addTodo: props => data => (props.add(data), props.handleChange('')),
+  addTodo: props => data => data.trim() && (props.add(data), props.handleChange('')),
 });
 
 const state = withState('input', 'handleChange', '');
