@@ -11,3 +11,5 @@
 ### Production build
 
 > npm run build
+
+![preview](preview.png)
